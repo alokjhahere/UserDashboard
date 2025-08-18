@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom/client'
+import UserList from './src/components/UserList';
 
 const AppLayout = () => {
     return (
         <div>
-         Hello
+         <UserList/>
         </div>
     )
 }
