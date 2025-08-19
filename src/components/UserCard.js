@@ -1,13 +1,16 @@
-const UserCard = ({data, onClick}) => {
-    
-    const {name, email, company} = data;
-  return (
-    <div className="cursor-pointer col-auto m-2 p-2 border border-gray-500 shadow-lg" onClick={onClick}>
-      <h1>{name}</h1>
-      <h3>{email}</h3>
-      <h3>{company.name}</h3>
-    </div>
-  )
-}
+const UserCard = ({ data, onClick }) => {
+  const { name, email, company } = data;
 
-export default UserCard
+  return (
+    <div
+      onClick={onClick}
+      className="cursor-pointer w-full sm:w-72 p-4 m-2 border rounded-lg shadow hover:shadow-lg transition bg-white"
+    >
+      <h1 className="text-lg font-semibold text-gray-800">{name}</h1>
+      <h3 className="text-sm text-gray-600">{email}</h3>
+      <h3 className="text-sm text-gray-500">{company?.name}</h3>
+    </div>
+  );
+};
+
+export default UserCard;
